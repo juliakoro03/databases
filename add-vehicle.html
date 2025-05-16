@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Vehicle</title>
+    <link rel="stylesheet" href="style.css">
+    <br>
+    </head>
+<body>
+    <div id="container">
+        <header>
+            <button id="theme-switch">
+            <svg xmlns="darkmode.svg" height:"24px"></svg>
+            <svg xmlns="lightmode.svg" height:"24px"></svg>
+            </button>
+            <h1>Add a Vehicle</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Back to main</a></li>
+                    <li><a href="people.html">Owner Search</a></li>
+                    <li><a href="vehicle.html">Vehicle Search</a></li>
+                    <li><a href="add-vehicle.html">Add a Vehicle</a></li>
+                    </ul>
+            </nav>
+        </header>
+        <main>
+            <form id="add-vehicle-form">
+                <div>
+                    <label for="add-registration-plate">Add registration plate:</label>
+                    <input type="text" id="add-registration-plate" name="registration">
+                    </div>
+                <div>
+                    <label for="add-make">Add vehicle make:</label>
+                    <input type="text" id="add-make" name="make">
+                    </div>
+                <div>
+                    <label for="add-model">Add vehicle model:</label>
+                    <input type="text" id="add-model" name="model">
+                    </div>
+                <div>
+                    <label for="add-colour">Add vehicle colour:</label>
+                    <input type="text" id="add-colour" name="colour">
+                    </div>  
+                <div>
+                    <label for="check-owner">Add the owner name:</label>
+                    <input type="text" id="check-owner" name="checkowner">
+                    <button type="button" id="check-owner-button" style="display:none;">check new owner</button>
+                    </div>  
+                <div id="owner-results">
+                    </div>
+                <button type="button" id="new-owner-button" style="display:none;">new owner</button>
+                <div id="new-owner-form" style="display:none;">
+                    <h3>New owner information</h3>
+                    <div>
+                        <label for="owner-id">Owner ID:</label>
+                        <input type="number" id="ownerid" name="owner-id" required>
+                        </div>
+                    <div>
+                        <label for="owner-name">Owner name:</label>
+                        <input type="text" id="ownername" name="owner-name" required>
+                        </div>
+                    <div>
+                        <label for="owner-address">Owner address:</label>
+                        <input type="text" id="owneraddress" name="owner-address" required>
+                        </div>
+                    <div>
+                        <label for="owner-DOB">Owner date of birth:</label>
+                        <input type="text" id="ownerdob" name="owner-DOB" required>
+                        </div>
+                    <div>
+                        <label for="owner-license-number">Owner license number:</label>
+                        <input type="text" id="ownerlicense" name="owner-license-number" required>
+                        </div>
+                    <div>
+                        <label for="owner-expiry-date">Owner driving license expiry date:</label>
+                        <input type="text" id="ownerexpirydate" name="owner-iexpiry-date" required>
+                        </div>
+                <button type="button" id="add-owner-button">Add a new owner</button>
+                <div id="msgforowner"></div>
+                </div>
+                <button type="submit" id="add-vehicle-button">Add a new vehicle</button>
+                <div id="msgvehicle"></div>
+                </form>
+            </main>
+        <aside>
+        <img src="Hands of users with mobile phones set.jpg" alr="img for vehicle search" style="width:300px;height:350px;">        </aside>
+        <footer>
+            <p>&copy; 2025 Add Vehicle Management System</p>
+            </footer>
+    </div>
+    <script src="script.js"></script> 
+    </body>
+</html> 

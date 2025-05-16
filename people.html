@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome page</title>
+    <link rel="stylesheet" href="style.css">
+    <br>
+
+    </head>
+<body>
+    <div id="container">
+        <header>
+            <button id="theme-switch">
+            <svg xmlns="darkmode.svg" height:"24px"></svg>
+            <svg xmlns="lightmode.svg" height:"24px"></svg>
+            </button>
+            <h1>Owner Search</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Back to main</a></li>
+                    <li><a href="people.html">Owner Search</a></li>
+                    <li><a href="vehicle.html">Vehicle Search</a></li>
+                    <li><a href="add-vehicle.html">Add a Vehicle</a></li>
+                    </ul>
+            </nav>
+        </header>
+        <main>
+              <form id="owner-search-form">
+                <div>
+                    <label for="owner-name">Search by name:</label>
+                    <input type="text" id="owner-name" name="owner name">
+                    </div>
+                <button onclick="displayText()">Submit</button>
+                <div id="textField" style="display: none;">This is the text that appears when you click the button.
+                </div>
+                </form>
+            <div id="message"></div>
+            <div id="results"></div>
+            </main>
+             <aside>
+            <img src="Hands of users with mobile phones set.jpg" alr="img for vehicle search" style="width:300px;height:350px;">
+        </aside>
+        <footer>
+            <p>&copy; 2025 Vehicle Management System</p>
+            </footer>
+    </body>
+    <script src="script.js"></script> 
+</html>
