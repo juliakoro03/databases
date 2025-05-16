@@ -38,7 +38,7 @@ body {
     .dark-mode a:hover { color:lightsalmon; }
     .dark-mode a:active { color: lightcoral; text-decoration: none; font-weight: normal; }
 
-#theme-switch{
+#theme-switch-button{
     height: 50px;
     width: 50px;
     padding: 0;
@@ -52,19 +52,19 @@ body {
     left: 20px;
 }
 
-#theme-switch svg{
+#theme-switch-button svg{
     fill: var(--primary-color);
 }
 
-#theme-switch svg:last-child{
+#theme-switch-button svg:last-child{
     display: none;
 }
 
-.darkmode #theme-switch svg:first-child{
+.darkmode #theme-switch-button svg:first-child{
     display: none;
 }
 
-.darkmode #theme-switch svg:last-child{
+.darkmode #theme-switch-button svg:last-child{
     display: block;
 }
 
