@@ -1,13 +1,20 @@
 // -- INITIALISING SUPABASE CLIENT WITH MY PROJECT URL & API KEY --
+// supplying the type definitions to supabase-js first
+import { createClient } from '@supabase/supabase-js'
+import { Database, Tables, Enums } from './database.types.ts';
+import { QueryResult, QueryData, QueryError } from '@supabase/supabase-js'
 
-// const supabaseUrl = ''; 
-// const supabaseKey = '';
-// const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseUrl = 'https://xcyzaslwqzwecvzwpdfu.supabase.co'; 
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjeXphc2x3cXp3ZWN2endwZGZ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU4NTM1NzUsImV4cCI6MjA2MTQyOTU3NX0.bi_UxiR9_3jZQ9l8rIlbfnw8hUgIm_0ftgCctUp5LZI';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
-// -------- MAIN PAGE FUNCTIONALITY (index.html) --------
-// darkmode
+const { data, error } = await supabase
+.from("people")
+.select();
+
+// darkmode & lightmode for all pages
 let darkmode = localStorage.getItem('darkmode')
-const themeSwitch = document.getElementById('theme-switch')
+const themeSwitch = document.getElementById('theme-switch-button')
 
 const enableDarkmode = () => {
     document.body.classList.add('darkmode')
@@ -26,7 +33,10 @@ themeSwitch.addEventListener("click", () => {
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
 })
 
+// -------- MAIN PAGE FUNCTIONALITY (index.html) --------
 // TESTS
+
+
 
 // -------- OWNER SEARCH FUNCTIONALITY (people.html) --------
 
